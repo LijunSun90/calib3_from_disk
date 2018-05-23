@@ -1,0 +1,17 @@
+close all
+clear
+clc
+
+sidePixels = 60;
+tilesPerRow = 5;
+tilesPerCol = 6;
+I = checkerboard(sidePixels, tilesPerRow, tilesPerCol) > 0.5;
+ScreenPixelsPerInch = get(0, 'ScreenPixelsPerInch');
+figure
+
+imshow(I)
+title({['Each square has ', num2str(sidePixels), ' pixels per side',...
+    ', ScreenPixelsPerInch = ',  num2str(ScreenPixelsPerInch)]; ...
+    [', The length of each squre side is ', ...
+    num2str(sidePixels/ScreenPixelsPerInch), ' inches',...
+    ' or ', num2str(25.4 * sidePixels/ScreenPixelsPerInch), 'mm']})
