@@ -47,7 +47,7 @@ printf("\n\n"
 
 int main(int argc, char* argv[]){
     int n_boards = 0; // Will be set by input list.
-    float object_size = 1.0; // or 25.4 m
+    float object_size = 1.0; // or 25.4 mm
     float image_sf = 0.5f;
     float delay = 1.f;
     int board_w = 0;
